@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  position: relative;
+}
+
+.titulo {
+  margin-top: 15px;
+  text-align: center;
+}
+
+h1, h2, h3, p, a, label {
+  color: white;
+}
+
+.header {
+  background-color: brown;
+  height: 50px;
+  align-content: center;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-left: 25px;
+}
+
+.cards {
+  border: solid 2px red;
+  width: 300px;
+  height: 350px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.title {
+  height: 100px;
+  background-color: blue;
+  text-align: center;
+}
+
+.description {
+  height: 120px;
+  background-color: red;
+  text-align: center;
+}
+
+.price {
+  background-color: darkslategray;
+  text-align: center;
+}
+
+.control {
+  text-align: center;
+  max-height: max-content;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn_cart {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+.botones {
+  font-size: 2em;
+}
+
+.footer {
+  background-color: brown;
+  height: 50px;
+  text-align: center;
+  align-content: center;
+}
+
+.modalcart {
+  width: 550px;
+  height: 500px;
+  background-color: black;
+  border: solid 3px white;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  overflow-y: auto;
+}
+
+.cart {
+  text-align: center;
+}
+
+.hidewc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 3em;
+}
+
+.slide-in-left {
+  transform: translateX(0);
+}
+
+.hidecart {
+  display: none;
+}
+
+.cartitem {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  border: solid 3px blue;
+  border-radius: 15px;
+  background-color: forestgreen;
+}
+
+.cartitems {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.botones {
+  font-size: 1.5em;
+}
+
+.alinear-texto {
+  text-align: center;
+}
