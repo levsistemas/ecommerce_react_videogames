@@ -1,0 +1,13 @@
+.login {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.logininvalido {
+    display: block;
+    color: white;
+}

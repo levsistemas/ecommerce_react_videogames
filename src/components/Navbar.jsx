@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
+
 import '../navbar.css'
+import '../index.css'
 
 function Nav({ onCarritoClick }) {
   return (
     <nav className='nav'>
-      <a href="#">Sección 1</a>
-      <a href="#">Sección 2</a>
-      <a href="#">Sección 3</a>
-      <a href="#">Sección 4</a>
+      <a href="/">Home</a>
+      <a href="#">Donde estamos</a>
+      <a href="#">Quienes somos</a>
+      <a href="#">Contacto</a>
+      <a href="/login">Iniciar sesión</a>
       <a href="#" onClick={(e) => {
         e.preventDefault();
         onCarritoClick();

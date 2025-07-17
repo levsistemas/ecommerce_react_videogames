@@ -17,7 +17,6 @@ const Products = ({item}) => {
     const agregarToCart = () => {
         setCantidad(cantidad)
         const cantidadJuego=setCantidad(cantidad)
-        console.log(`Agregando info...\n\n${item.titulo}\n\n$${item.precio*cantidad}\n`)
     }
 
     const agregarCarrito = () => {

@@ -1,50 +1,32 @@
-import { createContext, useState } from 'react'
-import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
+import Home from './components/Home'
+import Login from './components/Login'
 import Header from './components/Header'
-import Container from './components/Container'
-import WindowCart from './components/WindowCart'
-import Footer from './components/Footer'
-import CartContext from './components/CartContext'
+import './index.css'
 
-function App() {
-  const [mostrarCarrito,setMostrarCarrito] = useState(false)
-  const [cart, setCart] = useState([])
-  const [cantidad, setCantidad] = useState(1)
+function App(){
+  const [verCarrito, setVerCarrito] = useState(false)
 
-  const manejarCantidad = () => {
-    setCantidad(cantidad - 1)
-    console.log(setCantidad(cantidad))
-  }
-
-  const toggleCarrito = ()=> {
-    setMostrarCarrito(estado => !estado)
-  }
-
-  const incrementar = () => {
-      setCantidad(cantidad + 1);
-  }
-
-  const decrementar = () => {
-      setCantidad(cantidad - 1)
-  }
-
-  const addToCart = (product) => {
-    const productoExistente = cart.find(item => item.id === product.id)
-    if(productoExistente) {
-      setCart(cart.map(item => item.id === product.id ? {...item, cantidad: item.cantidad + 1} : item))
-    } else {
-      setCart([...cart, {...product, cantidad: product.cantidad}])
-    }
-  }
+  // const mostrarCarrito = () => {
+  //   document.getElementById('carritomodal').toggle('hidecart')
+  //   setVerCarrito(!verCarrito)
+  // }
 
   return (
-    <CartContext.Provider value={{cart: cart, addToCart: addToCart}}>
-    <Header onCarritoClick={toggleCarrito} onAbrir={toggleCarrito}/>
-    {mostrarCarrito && (<WindowCart onAbrir={toggleCarrito} className={mostrarCarrito ? 'modalcart' : 'hidecart'}/>)}
-    <h1 className='titulo'>Bienvenidos al Club de los Videojuegos</h1>
-    <Container manejarCantidad={manejarCantidad} />
-    <Footer />
-    </CartContext.Provider>
+    <>
+    <Home/>
+    {/* <Header onCarritoClick={mostrarCarrito}/> */}
+    {/* <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>} Productos />
+        <Route path="/ubicacion" element={<ubicacion/>} Donde estamos />
+        <Route path="/nosotros" element={<about/>} Quienes Somos />
+        <Route path="/contacto" element={<contacto/>} Contacto />
+        <Route path="/login" element={<Login/>} Inicio de sesion />
+      </Routes>
+    </BrowserRouter> */}
+    </>
   )
 }
 
